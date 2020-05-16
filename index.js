@@ -176,7 +176,19 @@ function renderAQuestion(){
 
 
 function submitAnswer(){
-
+    $('.duneContainer).on('submit', function (event) {
+        event.preventDefault();
+        $('.altBox').hide();
+        $('.response').show();
+        let selected = $('input:checked');
+        let answer = selected.val();
+        let correct = STORE[questionNumber].correctAnswer;
+        if (answer === correct) {
+          correctAnswer();
+        } else {
+          wrongAnswer();
+        }
+      });
     
 }
 
