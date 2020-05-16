@@ -118,20 +118,56 @@ const STORE =[
       ],
       correctAnswer: 'A) Chilton Books',
 
-},
+}
 
 ];
+
+let score = 0;
+let questionNumber = 0;
+
+function startQuiz(){
+   $('#startBtn').on('click', function(event){
+       $('.altBox').hide();
+       $('.start-quiz').hide();
+       $('.questionBox').show();
+       $('.questionBox').prepend(renderAQuestion());
+       $('.questionNumber').text(1);
+   });
+}
+
+
+
+function renderAQuestion(){
+    
+
+}
+
+
+function submitAnswer(){
+    
+}
+
+function nextQuestion(){
+    
+}
+
+
+function restartQuiz(){
+   
+}
+
+
 
 
 
 
 function handleQuizClicks(){
-    sstartQuiz();
+    startQuiz();
     renderAQuestion();
     submitAnswer();
     nextQuestion();
     restartQuiz();
     }
-}
+
 
 $(handleQuizClicks());
