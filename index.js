@@ -176,7 +176,7 @@ function renderAQuestion(){
 
 
 function submitAnswer(){
-    $('.duneContainer).on('submit', function (event) {
+    $('.duneContainer').on('submit', function (event) {
         event.preventDefault();
         $('.altBox').hide();
         $('.response').show();
@@ -192,6 +192,7 @@ function submitAnswer(){
     
 }
 
+
 function nextQuestion(){
     
 }
@@ -201,7 +202,27 @@ function restartQuiz(){
    
 }
 
+function correctAnswer(){
+    $('.response').html(
+      `<h3>Your answer is correct!</h3>
+        <p class="sizeMe">Frank Herbert is proud</p>
+        <button type="button" class="nextButton button">Next</button>`
+    );
+    updateScore();
+  }
+function wrongAnswer(){
+    $('.response').html(
+        `<h3>Your answer is wrong!</h3>
+          <p class="sizeMe">Frank Herbert is sad</p>
+          <button type="button" class="nextButton button">Next</button>`
+      );
+    
+}
 
+function updateScore(){
+    score ++;
+    $('.score').text(score);
+}
 
 
 
