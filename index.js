@@ -135,15 +135,48 @@ function startQuiz(){
    });
 }
 
+function createHTML(questionIndex){
+let formMaker = $(`
+<form>
+   <fieldset>
+       <legend class="question text">
+           ${STORE[questionIndex].question}
+       </legend>
+
+   </fieldset>
+</form>
+`)
+
+
+let fieldSelector = $(formMaker).find('fieldset');
+  
+STORE[questionIndex].answers.forEach(function (answerValue, answerIndex) {
+  $(`<label class="sizeMe" for="${answerIndex}">
+      <input class="radio" type="radio" id="${answerIndex}" value="${answerValue}" name="answer" required>
+      <span>${answerValue}</span>
+    </label>
+    `).appendTo(fieldSelector);
+});
+$(`<button type="submit" class="submitButton button"> Submit</button > `).appendTo(fieldSelector);
+return formMaker;
+}
 
 
 function renderAQuestion(){
-    
+    if(questionNumber<STORE.length){
+        return createHTML(questionNumber);
+    }else{
+        $('.questionBox').hide();
+         finalScore();
+         $('.questionNumber').text(10);    
+    }
 
 }
 
 
+
 function submitAnswer(){
+
     
 }
 
