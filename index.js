@@ -1,6 +1,6 @@
 const STORE =[
 {
-    questions: 'Dune was first published by which publisher?',
+    question: 'Dune was first published by which publisher?',
     answers: [
         'A) Chilton Books',
         'B) Analog Magazine',
@@ -8,11 +8,11 @@ const STORE =[
         'D) Penguin Random House',
         'E) Macmillan'
       ],
-      correctAnswer: 'A) Chilton Books',
+      correctAnswer: 'A) Chilton Books'
 
 },
 {
-    questions: 'What Inspire Frank Herbert to set the desert as a setting of his story',
+    question: 'What Inspire Frank Herbert to set the desert as a setting of his story',
     answers: [
         'A) A trip to Oregon',
         'B) trip to the Sahara Desert',
@@ -20,11 +20,11 @@ const STORE =[
         'D) Penguin Random House',
         'E) Macmillan'
       ],
-      correctAnswer: 'A) Chilton Books',
+      correctAnswer: 'A) A trip to Oregon'
 
 },
 {
-    questions: 'Dune was first published by which publisher?',
+    question: '3Dune was first published by which publisher?',
     answers: [
         'A) Chilton Books',
         'B) Analog Magazine',
@@ -32,11 +32,11 @@ const STORE =[
         'D) Penguin Random House',
         'E) Macmillan'
       ],
-      correctAnswer: 'A) Chilton Books',
+      correctAnswer: 'A) Chilton Books'
 
 },
 {
-    questions: 'Dune was first published by which publisher?',
+    question: '4Dune was first published by which publisher?',
     answers: [
         'A) Chilton Books',
         'B) Analog Magazine',
@@ -44,11 +44,11 @@ const STORE =[
         'D) Penguin Random House',
         'E) Macmillan'
       ],
-      correctAnswer: 'A) Chilton Books',
+      correctAnswer: 'A) Chilton Books'
 
 },
 {
-    questions: 'Dune was first published by which publisher?',
+    question: '5Dune was first published by which publisher?',
     answers: [
         'A) Chilton Books',
         'B) Analog Magazine',
@@ -56,11 +56,11 @@ const STORE =[
         'D) Penguin Random House',
         'E) Macmillan'
       ],
-      correctAnswer: 'A) Chilton Books',
+      correctAnswer: 'A) Chilton Books'
 
 },
 {
-    questions: 'Dune was first published by which publisher?',
+    question: 'Dune was first published by which publisher?',
     answers: [
         'A) Chilton Books',
         'B) Analog Magazine',
@@ -68,11 +68,11 @@ const STORE =[
         'D) Penguin Random House',
         'E) Macmillan'
       ],
-      correctAnswer: 'A) Chilton Books',
+      correctAnswer: 'A) Chilton Books'
 
 },
 {
-    questions: 'Dune was first published by which publisher?',
+    question: 'Dune was first published by which publisher?',
     answers: [
         'A) Chilton Books',
         'B) Analog Magazine',
@@ -80,11 +80,11 @@ const STORE =[
         'D) Penguin Random House',
         'E) Macmillan'
       ],
-      correctAnswer: 'A) Chilton Books',
+      correctAnswer: 'A) Chilton Books'
 
 },
 {
-    questions: 'Dune was first published by which publisher?',
+    question: 'Dune was first published by which publisher?',
     answers: [
         'A) Chilton Books',
         'B) Analog Magazine',
@@ -92,11 +92,11 @@ const STORE =[
         'D) Penguin Random House',
         'E) Macmillan'
       ],
-      correctAnswer: 'A) Chilton Books',
+      correctAnswer: 'A) Chilton Books'
 
 },
 {
-    questions: 'Dune was first published by which publisher?',
+    question: 'Dune was first published by which publisher?',
     answers: [
         'A) Chilton Books',
         'B) Analog Magazine',
@@ -104,11 +104,11 @@ const STORE =[
         'D) Penguin Random House',
         'E) Macmillan'
       ],
-      correctAnswer: 'A) Chilton Books',
+      correctAnswer: 'A) Chilton Books'
 
 },
 {
-    questions: 'Dune was first published by which publisher?',
+    question: 'Dune was first published by which publisher?',
     answers: [
         'A) Chilton Books',
         'B) Analog Magazine',
@@ -116,7 +116,7 @@ const STORE =[
         'D) Penguin Random House',
         'E) Macmillan'
       ],
-      correctAnswer: 'A) Chilton Books',
+      correctAnswer: 'A) Chilton Books'
 
 }
 
@@ -125,45 +125,54 @@ const STORE =[
 let score = 0;
 let questionNumber = 0;
 
+
+function updateScore(){
+    score++;
+    $('.score').text(score);
+  }
+  function updateQuestionNumber() {
+    questionNumber++;
+    $('.questionNumber').text(questionNumber + 1);
+  }
+
+
+
+
+
 function startQuiz(){
-   $('#startBtn').on('click', function(event){
-       $('.altBox').hide();
-       $('.start-quiz').hide();
-       $('.questionBox').show();
-       $('.questionBox').prepend(renderAQuestion());
+    $('.altBox').hide();
+   $('.startQuiz').on('click', '.startBtn', function(event){
+       $('.startQuiz').hide();
        $('.questionNumber').text(1);
+       $('.questionBox').show();
+       $('.questionBox').prepend(renderAQuestion()); 
    });
 }
 
-function createHTML(questionIndex){
-let formMaker = $(`
-<form>
-   <fieldset>
-       <legend class="question text">
-           ${STORE[questionIndex].question}
-       </legend>
-
-   </fieldset>
-</form>
-`)
-
-
-let fieldSelector = $(formMaker).find('fieldset');
+function createHTML(questionIndex) {
+    let formMaker = $(`<form>
+      <fieldset>
+        <legend class="questionText">${STORE[questionIndex].question}</legend>
+      </fieldset>
+    </form>`)
   
-STORE[questionIndex].answers.forEach(function (answerValue, answerIndex) {
-  $(`<label class="sizeMe" for="${answerIndex}">
-      <input class="radio" type="radio" id="${answerIndex}" value="${answerValue}" name="answer" required>
-      <span>${answerValue}</span>
-    </label>
-    `).appendTo(fieldSelector);
-});
-$(`<button type="submit" class="submitButton button"> Submit</button > `).appendTo(fieldSelector);
-return formMaker;
-}
+    let fieldSelector = $(formMaker).find('fieldset');
+  
+    STORE[questionIndex].answers.forEach(function (answerValue, answerIndex) {
+      $(`<label class="sizeMe" for="${answerIndex}">
+          <input class="radio" type="radio" id="${answerIndex}" value="${answerValue}" name="answer" required>
+          <span>${answerValue}</span>
+        </label>
+        `).appendTo(fieldSelector);
+    });
+    $(`<button type="submit" class="submitButton button"> Submit</button > `).appendTo(fieldSelector);
+    return formMaker;
+  }
+  
 
 
 function renderAQuestion(){
-    if(questionNumber<STORE.length){
+    if(questionNumber < STORE.length){
         return createHTML(questionNumber);
     }else{
         $('.questionBox').hide();
@@ -194,8 +203,14 @@ function submitAnswer(){
 
 
 function nextQuestion(){
-    
+        $('.duneContainer').on('click', '.nextButton', function (event) {
+          $('.altBox').hide();
+          $('.questionBox').show();
+          updateQuestionNumber();
+          $('.questionBox form').replaceWith(renderAQuestion());
+        });         
 }
+
 
 
 function restartQuiz(){
@@ -236,4 +251,4 @@ function handleQuizClicks(){
     }
 
 
-$(handleQuizClicks());
+$(handleQuizClicks);
