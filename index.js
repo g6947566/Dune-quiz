@@ -213,9 +213,14 @@ function nextQuestion(){
 
 
 
-function restartQuiz(){
-   
-}
+function restartQuiz() {
+    $('.jungleBox').on('click', '.restartButton', function (event) {
+      event.preventDefault();
+      resetStats();
+      $('.altBox').hide();
+      $('.startQuiz').show();
+    });
+  }
 
 function correctAnswer(){
     $('.response').html(
@@ -234,11 +239,41 @@ function wrongAnswer(){
     
 }
 
-function updateScore(){
-    score ++;
-    $('.score').text(score);
-}
+function finalScore() {
+  $('.final').show();
 
+  const gradeA = [
+    'You sure love Dune!',
+    'I bow to your knowledge'
+  ];
+
+  const gradeB = [
+    'Nice!',
+    'Frank Herbert still loves you'
+   
+
+  ];
+
+  const gradeC = [
+    'Read Dune',
+    'Love Dune'
+    
+  ];
+
+  if (score >= 8) {
+    array = gradeA;
+  } else if (score < 8 && score >= 5) {
+    array = gradeB;
+  } else {
+    array = gradeC;
+  }
+  return $('.final').html(
+    `<h3>${array[0]}</h3>
+    <h3>${array[1]}</h3>
+        <h3>Your score is ${score} / 10</h3>
+        <button type="submit" class="restartButton button">Restart</button>`
+  );
+}
 
 
 
