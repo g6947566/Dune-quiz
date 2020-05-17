@@ -1,6 +1,6 @@
 const STORE =[
 {
-    question: 'Dune was first published by which publisher?',
+    question: '1. Dune was first published by which publisher?',
     answers: [
         'A) Chilton Books',
         'B) Analog Magazine',
@@ -12,7 +12,7 @@ const STORE =[
 
 },
 {
-    question: 'What Inspire Frank Herbert to set the desert as a setting of his story',
+    question: '2. What Inspire Frank Herbert to set the desert as a setting of his story',
     answers: [
         'A) A trip to Oregon',
         'B) trip to the Sahara Desert',
@@ -24,99 +24,100 @@ const STORE =[
 
 },
 {
-    question: '3Dune was first published by which publisher?',
+    question: '3. Who was the main character?',
     answers: [
-        'A) Chilton Books',
-        'B) Analog Magazine',
-        'C) Tom Doherty Associates',
-        'D) Penguin Random House',
-        'E) Macmillan'
+        'A) Lady Jessica',
+        'B) Alia',
+        'C) Paul Atreides',
+        'D) Leto Atreides',
+        'E) Leto II Atreides'
       ],
-      correctAnswer: 'A) Chilton Books'
+      correctAnswer: 'C) Paul Atreides'
 
 },
 {
-    question: '4Dune was first published by which publisher?',
+    question: '4. Who was Paul Atreides’s mother',
     answers: [
-        'A) Chilton Books',
-        'B) Analog Magazine',
-        'C) Tom Doherty Associates',
-        'D) Penguin Random House',
-        'E) Macmillan'
+        'A) Lady Jessica',
+        'B) Alia',
+        'C) Chani',
+        'D) Reverend Mother Ramallo',
+        'E) Reverend Mother Mohiam'
       ],
-      correctAnswer: 'A) Chilton Books'
+      correctAnswer: 'A) Lady Jessica'
 
 },
 {
-    question: '5Dune was first published by which publisher?',
+    question: '5. The name of Paul Atreides’s wife:',
     answers: [
-        'A) Chilton Books',
-        'B) Analog Magazine',
-        'C) Tom Doherty Associates',
-        'D) Penguin Random House',
-        'E) Macmillan'
+        'A) Margot Fenring',
+        'B) Princess Mohiam',
+        'C) Chani',
+        'D) Princess Irulan',
+        'E) Reverend Mother Ramallo '
       ],
-      correctAnswer: 'A) Chilton Books'
+      correctAnswer: 'D) Princess Irulan'
 
 },
 {
-    question: 'Dune was first published by which publisher?',
+    question: ' 6.  The Bene Gesserit litany against fear',
     answers: [
-        'A) Chilton Books',
-        'B) Analog Magazine',
-        'C) Tom Doherty Associates',
-        'D) Penguin Random House',
-        'E) Macmillan'
+        'A) Fear is temporary...I will see it go',
+        'B) Nothing in life is to be feared, it is only to be understood',
+        'C) Without darknes snothing comes to birth, as without light nothing flowers',
+        'D) Do not be afraid; our fate cannot be taken from us',
+        'E) I must not fear. For fear is the mind-killer...I will face my fear..'
       ],
-      correctAnswer: 'A) Chilton Books'
+      correctAnswer: 'E) I must not fear. For fear is the mind-killer...I will face my fear..'
 
 },
 {
-    question: 'Dune was first published by which publisher?',
+    question: '7. What are the Fremen’s ultimate goal on Dune?',
     answers: [
-        'A) Chilton Books',
-        'B) Analog Magazine',
-        'C) Tom Doherty Associates',
-        'D) Penguin Random House',
-        'E) Macmillan'
+        'A) To rid of their enemy the Harkonnens',
+        'B) To rule Dune',
+        'C) To be recognize as a free people',
+        'D) To create a green paradise in Dune',
+        'E) To escape Dune'
       ],
-      correctAnswer: 'A) Chilton Books'
+      correctAnswer: 'D) To create a green paradise in Dune'
 
 },
 {
-    question: 'Dune was first published by which publisher?',
+    question: ' 8. The Padishah Emperor Shaddam IV’s prison planet Salusa Secundus is a front for what?',
     answers: [
-        'A) Chilton Books',
-        'B) Analog Magazine',
-        'C) Tom Doherty Associates',
-        'D) Penguin Random House',
-        'E) Macmillan'
+        'A) A training ground for Sardaukar',
+        'B) A secret bunker',
+        'C) A storage space for the spice',
+        'D) A world of paradise',
+        'E) Another Dune'
+        
       ],
-      correctAnswer: 'A) Chilton Books'
+      correctAnswer: 'A) A training ground for Sardaukar'
 
 },
 {
-    question: 'Dune was first published by which publisher?',
+    question: '9. Why are there no futuristic robots in the book Dune?',
     answers: [
-        'A) Chilton Books',
-        'B) Analog Magazine',
-        'C) Tom Doherty Associates',
-        'D) Penguin Random House',
-        'E) Macmillan'
+        'A) Due to the war with artificial machines, all computers had inspired distrust.',
+        'B) Religion forbids them',
+        'C) A virus wiped all artificial life',
+        'D) People became much more evolved so there was no need for them',
+        'E) They had no recent window update'
       ],
-      correctAnswer: 'A) Chilton Books'
+      correctAnswer: 'A) Due to the war with artificial machines, all computers had inspired distrust.'
 
 },
 {
-    question: 'Dune was first published by which publisher?',
+    question: '10. What is a crysknife made out of?',
     answers: [
-        'A) Chilton Books',
-        'B) Analog Magazine',
-        'C) Tom Doherty Associates',
-        'D) Penguin Random House',
-        'E) Macmillan'
+        'A) Volcanic rock',
+        'B) Human Bones',
+        'C) Pearls',
+        'D) Gold',
+        'E) Tooth of a sandworm'
       ],
-      correctAnswer: 'A) Chilton Books'
+      correctAnswer: 'E) Tooth of a sandworm'
 
 }
 
@@ -160,7 +161,7 @@ function createHTML(questionIndex) {
   
     STORE[questionIndex].answers.forEach(function (answerValue, answerIndex) {
       $(`<label class="sizeMe" for="${answerIndex}">
-          <input class="radio" type="radio" id="${answerIndex}" value="${answerValue}" name="answer" required>
+          <input class="js-radio" type="radio" id="${answerIndex}" value="${answerValue}" name="answer" required>
           <span>${answerValue}</span>
         </label>
         `).appendTo(fieldSelector);
@@ -214,26 +215,32 @@ function nextQuestion(){
 
 
 function restartQuiz() {
-    $('.jungleBox').on('click', '.restartButton', function (event) {
+    $('.duneContainer').on('click', '.restartButton', function (event) {
       event.preventDefault();
       resetStats();
       $('.altBox').hide();
       $('.startQuiz').show();
     });
   }
+  function resetStats() {
+    score = 0;
+    questionNumber = 0;
+    $('.score').text(0);
+    $('.questionNumber').text(0);
+  }
 
 function correctAnswer(){
     $('.response').html(
       `<h3>Your answer is correct!</h3>
-        <p class="sizeMe">Frank Herbert is proud</p>
+        <p class="sizeMe correctAnswer">Frank Herbert is proud</p>
         <button type="button" class="nextButton button">Next</button>`
     );
     updateScore();
   }
 function wrongAnswer(){
     $('.response').html(
-        `<h3>Your answer is wrong!</h3>
-          <p class="sizeMe">Frank Herbert is sad</p>
+        `<div class="wrongAn"><h3>Wrong!</h3></div>
+          <p class="sizeMe wrongAnswer">Frank Herbert is sad</p>
           <button type="button" class="nextButton button">Next</button>`
       );
     
@@ -255,8 +262,8 @@ function finalScore() {
   ];
 
   const gradeC = [
-    'Read Dune',
-    'Love Dune'
+    'Please read Dune Again',
+    'Frank Herbert will change your life'
     
   ];
 
