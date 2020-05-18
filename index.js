@@ -4,8 +4,8 @@ const STORE =[
     answers: [
         'A) Chilton Books',
         'B) Analog Magazine',
-        'C) Tom Doherty Associates',
-        'D) Penguin Random House',
+        'C) Tom Doherty',
+        'D) Penguin',
         'E) Macmillan'
       ],
       correctAnswer: 'A) Chilton Books'
