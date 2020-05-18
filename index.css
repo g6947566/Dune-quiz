@@ -21,6 +21,7 @@
     background-color: #e67f4c; 
     font-family: 'Vollkorn', serif;
     margin: 40px 0;
+    
   }
   
 
@@ -29,11 +30,12 @@
     cursor: pointer;
     background-color: #030200;
     color: #ffffff;
+   
   }
  
   .duneContainer{
     
-    text-align:center;
+    /* text-align:center; */
     width: 80%;
     height: 50%;
     max-width: 800px;
@@ -52,6 +54,14 @@ h1{
   margin: 20px 0;
 }
 
+.startQuiz{
+  text-align: center;
+}
+.buttonContainer{
+
+  text-align: center;
+  
+}
 
 
  .duneTitle{
@@ -103,13 +113,15 @@ ul{
     padding: 10px 0 80px 0;
     font-family: 'Roboto', sans-serif; 
     font-weight:700;
+    text-align: center;
     
 }
 
 label.sizeMe{
   font-size: 20px;
   display: flex;
-  
+  width: 80%;
+  height: 50%;
   justify-content: left;
   padding: 5px 0;
 }
@@ -124,7 +136,16 @@ h3{
 }
 .wrongAn{
   color:red;
+  /* text-align: center; */
 }
+/* p.sizeMe.wrongAnswer{
+text-align: center;
+} */
+
+section.response.altBox{
+  text-align:center;
+}
+
 
 
 

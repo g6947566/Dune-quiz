@@ -60,7 +60,7 @@ const STORE =[
 
 },
 {
-    question: ' 6.  The Bene Gesserit litany against fear',
+    question: ' 6. The Bene Gesserit litany against fear',
     answers: [
         'A) Fear is temporary...I will see it go',
         'B) Nothing in life is to be feared, it is only to be understood',
@@ -166,7 +166,7 @@ function createHTML(questionIndex) {
         </label>
         `).appendTo(fieldSelector);
     });
-    $(`<button type="submit" class="submitButton button"> Submit</button > `).appendTo(fieldSelector);
+    $(`<div class= "buttonContainer"><button type="submit" class="submitButton button"> Submit</button > </div>`).appendTo(fieldSelector);
     return formMaker;
   }
   
