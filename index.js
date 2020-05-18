@@ -15,9 +15,9 @@ const STORE =[
     question: '2. What Inspire Frank Herbert to set the desert as a setting of his story',
     answers: [
         'A) A trip to Oregon',
-        'B) trip to the Sahara Desert',
-        'C) Tom Doherty Associates',
-        'D) Penguin Random House',
+        'B) A trip to Sahara Desert',
+        'C) A trip to Mexico',
+        'D) A trip to Florida',
         'E) Macmillan'
       ],
       correctAnswer: 'A) A trip to Oregon'
@@ -222,6 +222,7 @@ function restartQuiz() {
       $('.startQuiz').show();
     });
   }
+
   function resetStats() {
     score = 0;
     questionNumber = 0;
@@ -237,6 +238,7 @@ function correctAnswer(){
     );
     updateScore();
   }
+  
 function wrongAnswer(){
     $('.response').html(
         `<div class="wrongAn"><h3>Wrong!</h3></div>
