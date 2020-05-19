@@ -123,6 +123,11 @@ const STORE =[
 
 ];
 
+
+
+
+
+
 let score = 0;
 let questionNumber = 0;
 
@@ -135,9 +140,6 @@ function updateScore(){
     questionNumber++;
     $('.questionNumber').text(questionNumber + 1);
   }
-
-
-
 
 
 function startQuiz(){
