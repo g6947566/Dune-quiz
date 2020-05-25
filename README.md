@@ -5,7 +5,7 @@ This is a interactive Quiz App base on Frank Herbert's novel Dune.
 Live : https://g6947566.github.io/Dune-quiz/
 
 <h1>Programming Skills Used:</h1> 
-HTML, CSS, and jQuery.
+HTML, CSS, and, JavaScript, jQuery.
 
 <h1>Technical Requirement:</h1>
 1. Render answer choices in a form.<br>
