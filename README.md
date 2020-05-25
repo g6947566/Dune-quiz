@@ -15,3 +15,6 @@ HTML, CSS, and jQuery.
 5. Responsive design- no matter the browser size<br>
 6. Be fully usable by keyboard
 
+<h1>Screenshot of Dune Quiz</h1>
+
+![Dune Quiz](https://user-images.githubusercontent.com/62404151/82768082-96773100-9dfa-11ea-96a4-16935a61ad54.png "Screenshot of Dune Quiz")
